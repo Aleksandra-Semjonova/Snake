@@ -9,10 +9,23 @@ namespace Snake
     //2 õppetund
     internal class Point
     {
-        //объединил три переменных в новый некий тип данных
+        // ühendasime kolm muutujat mingiks uueks andmetüübiks
         public int x;
         public int y;
         public char sym;
+
+        public Point() 
+        {
+
+        }
+
+        public Point(int _x, int _y, char _sym)
+        {
+            x = _x;
+            y = _y;
+            sym = _sym;
+
+        }
 
         public void Draw()
         {
