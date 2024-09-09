@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
+    
     //2 õppetund
     internal class Point
     {
