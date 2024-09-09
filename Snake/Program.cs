@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    
+     
     /// 1 õppetund
     internal class Program
     {
