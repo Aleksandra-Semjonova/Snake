@@ -15,7 +15,7 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.SetBufferSize( 80, 25);
+            Console.SetWindowSize( 80, 25);
 
             //Point p1 = new Point(1, 3, '*');
             //p1.Draw();
@@ -37,10 +37,8 @@ namespace Snake
             Point p = new Point(4, 5, '*');
             p.Draw();
 
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
 
-            Emploee e = new Emploee();
-            e.age = 42;
-            e.pay = 30000;
 
 
             //Console.WriteLine();
