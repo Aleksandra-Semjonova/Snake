@@ -38,6 +38,8 @@ namespace Snake
             p.Draw();
 
             Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Drow();
+            snake.Move();
 
 
 
