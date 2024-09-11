@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 namespace Snake
 {
     //õppetund 7
-    internal class HorizontalLine
+    internal class HorizontalLine: Figure 
     {
-        List<Point> pList;
+        //List<Point> pList;
 
-        public HorizontalLine(int xLeft, int xReight, int y, char sym)
+        public HorizontalLine(int xLeft, int xRight, int y, char sym)
         { 
             pList = new List<Point>();
-            for (int x = xLeft; x <= xReight; x++)
+            for (int x = xLeft; x <= xRight; x++)
             {
                 Point p = new Point( x, y, sym); 
                 pList.Add(p);
@@ -29,14 +29,14 @@ namespace Snake
 
         }
 
-        public void Drow()
-        {
-            foreach (Point p in pList)
-            {
-                p.Draw();
+        //public void Drow()
+        //{
+        //    foreach (Point p in pList)
+        //    {
+        //        p.Draw();
 
 
-            }
-        }
+        //    }
+        //}
     }
 }
