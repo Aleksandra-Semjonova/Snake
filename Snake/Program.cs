@@ -41,12 +41,19 @@ namespace Snake
             snake.Drow();
             snake.Move();
 
+            FoodCreator foodCreator = new FoodCreator(80, 25, '$');
+            Point food = foodCreator.CreateFood();
+            food.Draw();
+
+
             while(true)
             {
-                if (Console.KeyAvailable)
-                { 
-                    ConsoleKeyInfo key = Console.ReadKey();
-                    snake.HandleKey(key.Key);
+                if (snake.Eat(food))
+                {
+                    food = foodCreator.CreateFood();
+                    food.Draw();
+                    //ConsoleKeyInfo key = Console.ReadKey();
+                    //snake.HandleKey(key.Key);
                     //ConsoleKeyInfo key = Console.ReadKey();
                     //if (key.Key == ConsoleKey.LeftArrow)
                     //    snake.direction = Direction.LEFT;
@@ -58,7 +65,19 @@ namespace Snake
                     //    snake.direction = Direction.UP;
 
                 }
+                else
+                {
+                    snake.Move();
+                }
+
                 Thread.Sleep(100);
+
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);
+                }
+
                 snake.Move(); 
             }
 
